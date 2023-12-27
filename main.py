@@ -10,7 +10,7 @@ import uvicorn
 app=FastAPI()
 class Body(BaseModel):
     text:str
-    length: int
+    max_length:int
 
 @app.get('/')
 def root():
@@ -19,7 +19,8 @@ def root():
 @app.post('/generate/')
 def main(body: Body):
     text = read_url(body.text)
-    summarised_text = predict(text)
+    max_length=body.max_length
+    summarised_text = predict(text, max_length=max_length  )
     return summarised_text
 
 
