@@ -10,6 +10,7 @@ import uvicorn
 app=FastAPI()
 class Body(BaseModel):
     text:str
+    length: int
 
 @app.get('/')
 def root():

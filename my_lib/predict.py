@@ -5,11 +5,11 @@ from transformers import AutoTokenizer, T5ForConditionalGeneration
 
 
 
-def predict(text):
+def predict(text, max_length=150):
     tokenizer=AutoTokenizer.from_pretrained("t5-small")
     summarizer = T5ForConditionalGeneration.from_pretrained("t5-small")
     input_token = tokenizer.encode(text, return_tensors="pt", max_length=700, truncation=True)
-    summary_ids = summarizer.generate(input_token, max_length=150, num_beams=4, length_penalty=2.0, early_stopping=True)
+    summary_ids = summarizer.generate(input_token, max_length=max_length, num_beams=4, length_penalty=2.0, early_stopping=True)
     output = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return output
 
