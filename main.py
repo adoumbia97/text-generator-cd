@@ -1,24 +1,26 @@
 """
 Main cli or app entry point
 """
-from my_lib.predict import predict, read_file, read_url
-import click
+from my_lib.predict import predict, read_url
+from fastapi import FastAPI
+from pydantic import BaseModel
+import uvicorn 
 
 
-@click.command("main")
-@click.option("--path")
-@click.option("--url")
-def main(path, url):
-    if path:
-        text = read_file(path)
-    elif url:
-        text = read_url(url)
+app=FastAPI()
+class Body(BaseModel):
+    text:str
 
+@app.get('/')
+def root():
+    return("<h1> Hello from DOUMBIA </h1>")
+
+@app.post('/generate/')
+def main(body: Body):
+    text = read_url(body.text)
     summarised_text = predict(text)
-
-    click.echo(click.style(summarised_text, fg="green"))
+    return summarised_text
 
 
 if __name__ == "__main__":
-    # pylint: disable=no-value-for-parameter
-    main()
+    uvicorn.run(app,port=8080, host='0.0.0.0')
