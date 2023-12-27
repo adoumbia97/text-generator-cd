@@ -1,0 +1,10 @@
+transformers==4.36.2
+torch==2.1.2
+textblob==0.17.1
+pylint==3.0.3
+black==23.12.1
+urllib3==2.1.0
+bs4==0.0.1
+sentencepiece==0.1.99
+pytest==7.4.3
+click==8.1.7

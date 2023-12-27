@@ -1,0 +1,13 @@
+Topic tagging is particularly useful to analyze huge amounts of text data in a fast and cost-effective way – from internal documents, communications with customers, or all over the web. Yes, you could do it manually but, let’s face it, when there’s too much information to be classified, it will just end up being time-consuming, expensive, and much less accurate.
+
+At MonkeyLearn, we help companies use topic analysis to make their teams more efficient, automate business processes, get valuable insights from data, and save hours of manual data processing.
+
+Imagine you need to analyze a large dataset of reviews to find out what people are saying about your product. You could combine topic labeling with sentiment analysis to discover which aspects or features (topics) of your product are being discussed most often, and determine how people feel about them (are their statements positive, negative or neutral?). This technique is known as aspect-based sentiment analysis.
+
+Besides brand monitoring, there are many other uses for topic analysis, such as social media monitoring, customer service, voice of customer (VoC) analysis, business intelligence, sales and marketing, SEO, product analytics and knowledge management.
+
+Why Is Topic Analysis Important?
+
+Businesses generate and collect massive amounts of data every day. Analyzing and processing this data using automated topic analysis methods will help businesses make better decisions, optimize internal processes, identify trends, and provide all sorts of other advantages to make them more efficient and productive.
+
+When it comes to sorting through all this data, machine learning models are crucial. Topic detection allows us to easily scan large documents and find out what customers are talking about.
